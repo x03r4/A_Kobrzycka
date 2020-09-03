@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+*::selection {
+  color: #ba7475;
+}
+
+body {
+  background-color: #5d989e;
+}
+
+.bg_img {
+  position: absolute;
+  z-index: -2;
+  filter: brightness(70%);
+}
+
+.wrapper {
+  position: relative;
+  background-image: url(/img/background-image.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -4;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 10vh;
+  margin: auto;
+}
+header .logo {
+  display: flex;
+  flex-direction: column;
+}
+header .logo .site_name {
+  min-width: 230px;
+  font-size: 24px;
+  flex: 1;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 200;
+  text-shadow: 2px 1px black;
+}
+header .logo .site_name::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 16px;
+  left: 8%;
+  top: 27px;
+  background-color: #ba7475;
+  z-index: -1;
+}
+header .logo .site_subname {
+  font-size: 16px;
+  color: white;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 2px 1px black;
+}
+header nav {
+  flex: 2;
+  font-weight: 300;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav ul li {
+  list-style-type: none;
+  margin: 0 30px 0 0;
+  cursor: pointer;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  padding: 3px;
+  text-shadow: 2px 1px black;
+}
+header nav ul li a:focus {
+  border-bottom: 5px solid #ba7475;
+}
+
+main .homescreen {
+  position: relative;
+  height: 90vh;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+main .homescreen .image_content {
+  position: relative;
+  flex: 1;
+}
+main .homescreen .image_content img {
+  position: absolute;
+}
+main .homescreen .image_content .up {
+  position: absolute;
+  width: 190px;
+  height: 170px;
+  left: 80px;
+  top: -160px;
+  mix-blend-mode: multiply;
+}
+main .homescreen .image_content .down {
+  position: absolute;
+  width: 190px;
+  height: 170px;
+  left: 0px;
+  mix-blend-mode: overlay;
+  top: -50px;
+  left: -10px;
+}
+main .homescreen .text_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 2;
+  padding: 0 0 0 25px;
+  color: white;
+}
+main .homescreen .text_content h2 {
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 500;
+  position: relative;
+  text-shadow: 2px 1px black;
+}
+main .homescreen .text_content h2::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 26px;
+  left: 6%;
+  top: 29px;
+  background-color: #ba7475;
+  z-index: -1;
+}
+main .homescreen .text_content p {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding: 0 0 0 30px;
+  text-shadow: 2px 1px black;
+}
+main .homescreen button {
+  position: absolute;
+  right: 0%;
+  bottom: 200px;
+  width: 260px;
+  height: 50px;
+  background: #ba7475;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 1px black;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  main .homescreen {
+    flex-direction: column;
+  }
+  main .homescreen h2 {
+    font-size: 24px;
+  }
+  main .homescreen .image_content {
+    width: 300px;
+    height: 300px;
+    top: 150px;
+    left: -150px;
+  }
+  main .homescreen .image_content .up {
+    width: 190px;
+    height: 170px;
+    left: 50px;
+    top: -70px;
+  }
+  main .homescreen .image_content .down {
+    width: 190px;
+    height: 170px;
+    left: -50px;
+    top: 50px;
+  }
+  main .homescreen .text_content {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 0px;
+  }
+  main .homescreen .text_content h2 {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 500;
+    position: relative;
+    text-shadow: 2px 1px black;
+  }
+  main .homescreen .text_content h2::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 26px;
+    left: 6%;
+    top: 29px;
+    background-color: #ba7475;
+    z-index: -1;
+  }
+  main .homescreen .text_content p {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding: 30px 0 0 30px;
+    text-shadow: 2px 1px black;
+  }
+  main .homescreen button {
+    right: 0%;
+    bottom: 100px;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 620px) {
+  header {
+    flex-direction: column;
+  }
+  header .logo {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  header .logo .site_name::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 16px;
+    left: 26%;
+    top: 45px;
+    background-color: #ba7475;
+    z-index: -1;
+  }
+  header .logo .site_subname {
+    font-size: 14px;
+  }
+
+  main .homescreen .image_content {
+    width: 300px;
+    height: 300px;
+    top: 0px;
+    left: 0px;
+  }
+  main .homescreen .image_content .up {
+    width: 190px;
+    height: 170px;
+    left: 50px;
+    top: -20px;
+  }
+  main .homescreen .image_content .down {
+    width: 190px;
+    height: 170px;
+    left: -50px;
+    top: 100px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
